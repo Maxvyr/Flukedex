@@ -2,7 +2,10 @@
 
 import 'package:equatable/equatable.dart';
 import 'package:flukedex/model/pokemon_base.dart';
+import 'package:json_annotation/json_annotation.dart';
+part 'pokemon_list.g.dart';
 
+@JsonSerializable()
 class PokemonList extends Equatable {
   PokemonList({
     required this.count,
@@ -11,30 +14,15 @@ class PokemonList extends Equatable {
     required this.results,
   });
 
-  // factory PokemonList.fromJson(Map<String, dynamic> json) {
-  //   return PokemonList(
-  //     count: json["count"],
-  //     next: json["next"],
-  //     previous: json["previous"],
-  //     results: json["results"],
-  //   );
-  // }
+  factory PokemonList.fromJson(Map<String, dynamic> json) => _$PokemonListFromJson(json);
 
-  PokemonList.fromJson(Map<String, dynamic> json) {
-    count = json['count'];
-    next = json['next'];
-    previous = json['previous'];
-    if (json['results'] != null) {
-      results = [];
-      json['results'].forEach((v) {
-        results!.add(Pokemon.fromJson(v));
-      });
-    }
-  }
-
-  int? count;
+  @JsonKey(defaultValue: -1)
+  int count;
+  @JsonKey(defaultValue: "")
   String? next;
+  @JsonKey(defaultValue: "")
   String? previous;
+  @JsonKey(defaultValue: [])
   List<Pokemon>? results;
 
   @override
