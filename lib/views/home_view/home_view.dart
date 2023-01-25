@@ -26,8 +26,8 @@ class HomeViewState extends ConsumerState<HomeView> {
             itemBuilder: (context, index) {
               final pokemon = pokemonList.results![index];
               return FadeInRight(
-                duration: const Duration(milliseconds: 800),
-                delay: const Duration(milliseconds: 200),
+                duration: const Duration(milliseconds: 300),
+                delay: const Duration(milliseconds: 0),
                 child: PokemonTile(
                   pokemon: pokemon,
                   index: index + 1,

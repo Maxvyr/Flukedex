@@ -3,6 +3,7 @@
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
+<a href="https://www.codefactor.io/repository/github/maxvyr/flukedex"><img src="https://www.codefactor.io/repository/github/maxvyr/flukedex/badge" alt="CodeFactor" /></a>
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A72UVP8)
 
